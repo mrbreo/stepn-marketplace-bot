@@ -1,21 +1,23 @@
 import json
-
 import secrets
-from stepn import StepnRequest, url_pics, mapping_chain_reversed, StepnNotFound, \
+from stepn import (
+    StepnRequest, url_pics, mapping_chain_reversed, StepnNotFound,
     safe_evolution, safe_add_percent, safe_minus_percent, mapping_currency
+)
 from stepn_discord import StepnClient
 
+# Discord Bot Configuration
 DISCORD_ID = secrets.DISCORD_BOT_ID
 DISCORD_TOKEN = secrets.DISCORD_BOT_TOKEN
 DISCORD_PUBLIC = secrets.DISCORD_BOT_PUBLIC
 
+# Stepn Account Configuration
 STEPN_ACCOUNT = secrets.STEPN_ACCOUNT
 STEPN_PASSWORD = secrets.STEPN_PASSWORD
-
 GOOGLE_2AUTH = secrets.GOOGLE_2AUTH
 
+# Rules and Messages
 rules_to_check = secrets.RULES
-
 messages_dict = {
     "mention": "stepnwatcher",
     "messages": [],
